@@ -1,0 +1,15 @@
+from typing import TYPE_CHECKING
+import uuid
+from sqlalchemy.dialects.postgresql import UUID
+from sqlalchemy import Column, Integer, String, ForeignKey, Float, DateTime
+from sqlalchemy.sql import func
+from sqlalchemy.orm import relationship
+from app.db.base_class import Base
+
+class Service(Base):
+    id = Column(Integer, primary_key=True, index=True)
+    uuid = Column(UUID(as_uuid=True), default=uuid.uuid4(), index=True)
+    description = Column(String(1000), index=True)
+    price = Column(Float)
+    image_url = Column(String(500))
+    timestamp = Column(DateTime(timezone=True), server_default=func.now())

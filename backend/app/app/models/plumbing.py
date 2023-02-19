@@ -5,5 +5,5 @@ from sqlalchemy.orm import relationship
 from app.db.base_class import Base
 from .service import Service
 
-class Cleaning(Service):
-    __tablename__ = "cleaning_services"
+class Plumbing(Service):
+    __tablename__ = "plumbing_services"

@@ -1,10 +1,9 @@
 from typing import TYPE_CHECKING
 
-from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy import Column, Integer, String, ForeignKey, Float
 from sqlalchemy.orm import relationship
 from app.db.base_class import Base
+from .service import Service
 
-class Electrical(Base):
-    id = Column(Integer, primary_key=True, index=True)
-    title = Column(String, index=True)
-    description = Column(String, index=True)
+class Electrical(Service):
+    __tablename__ = "electrial_services"
