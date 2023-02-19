@@ -1,8 +1,8 @@
-"""uuid fix
+"""test5
 
-Revision ID: 6922e7d1bf0b
-Revises: a681036f4f95
-Create Date: 2023-02-19 18:27:19.956610
+Revision ID: f2dabee565ca
+Revises: 
+Create Date: 2023-02-19 20:26:20.659905
 
 """
 from alembic import op
@@ -10,8 +10,8 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '6922e7d1bf0b'
-down_revision = 'a681036f4f95'
+revision = 'f2dabee565ca'
+down_revision = None
 branch_labels = None
 depends_on = None
 
