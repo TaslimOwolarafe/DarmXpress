@@ -1,9 +1,5 @@
-from typing import TYPE_CHECKING
-
-from sqlalchemy import Column, Integer, String, ForeignKey, Float
-from sqlalchemy.orm import relationship
 from app.db.base_class import Base
 from .service import Service
 
-class Cleaning(Service):
+class Cleaning(Base, Service):
     __tablename__ = "cleaning_services"
